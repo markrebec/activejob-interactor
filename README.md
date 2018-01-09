@@ -6,7 +6,7 @@
 [![Gem Version](https://badge.fury.io/rb/activejob-interactor.png)](http://badge.fury.io/rb/activejob-interactor)
 [![Dependency Status](https://gemnasium.com/markrebec/activejob-interactor.png?1=1)](https://gemnasium.com/markrebec/activejob-interactor)
 
-`ActiveJob::Interactor` allows you to run your [interactors](https://github.com/collectiveidea/interactor) as background jobs via active job.
+Two great tastes that taste great together! `ActiveJob::Interactor` allows you to run your [interactors](https://github.com/collectiveidea/interactor) as background jobs, either using custom job classes or the built-in job class for quick and easy backgrounding.
 
 ## Getting Started
 
