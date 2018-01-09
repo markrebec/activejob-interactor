@@ -12,12 +12,18 @@ module ActiveJob
 
       def interactor
         if self.class == ActiveJob::Interactor::Job
-          arguments.first.try(:constantize)
+          begin
+            arguments.first.try(:constantize)
+          rescue NameError => e
+            raise ArgumentError, "Invalid argument: '#{arguments.first.to_s}' is not a valid interactor"
+          end
         else
-          self.class.name.gsub(/Job\Z/, '').constantize
+          begin
+            self.class.name.gsub(/Job\Z/, '').constantize
+          rescue NameError => e
+            raise NameError, "Interactor class '#{self.class.name.gsub(/Job\Z/, '')}' does not exist"
+          end
         end
-      rescue NameError => e
-        raise NameError, "Interactor class does not exist: #{self.class.name.gsub(/Job\Z/, '')}"
       end
     end
   end
