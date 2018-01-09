@@ -1,10 +1,10 @@
 # ActiveJob::Interactor
 
-[![Build Status](https://travis-ci.org/markrebec/activejob-interactor.png)](https://travis-ci.org/markrebec/activejob-interactor)
-[![Coverage Status](https://coveralls.io/repos/markrebec/activejob-interactor/badge.svg)](https://coveralls.io/r/markrebec/activejob-interactor)
-[![Code Climate](https://codeclimate.com/github/markrebec/activejob-interactor.png)](https://codeclimate.com/github/markrebec/activejob-interactor)
-[![Gem Version](https://badge.fury.io/rb/activejob-interactor.png)](http://badge.fury.io/rb/activejob-interactor)
-[![Dependency Status](https://gemnasium.com/markrebec/activejob-interactor.png?1=1)](https://gemnasium.com/markrebec/activejob-interactor)
+[![Build Status](https://travis-ci.org/markrebec/activejob-interactor.png?1=1)](https://travis-ci.org/markrebec/activejob-interactor)
+[![Coverage Status](https://coveralls.io/repos/markrebec/activejob-interactor/badge.svg?1=1)](https://coveralls.io/r/markrebec/activejob-interactor)
+[![Code Climate](https://codeclimate.com/github/markrebec/activejob-interactor.png?1=1)](https://codeclimate.com/github/markrebec/activejob-interactor)
+[![Gem Version](https://badge.fury.io/rb/activejob-interactor.png?1=1)](http://badge.fury.io/rb/activejob-interactor)
+[![Dependency Status](https://gemnasium.com/markrebec/activejob-interactor.png)](https://gemnasium.com/markrebec/activejob-interactor)
 
 Two great tastes that taste great together! `ActiveJob::Interactor` allows you to run your [interactors](https://github.com/collectiveidea/interactor) as background jobs, either using custom job classes or the built-in job class for quick and easy backgrounding.
 
