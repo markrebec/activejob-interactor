@@ -11,7 +11,11 @@ module ActiveJob
       end
 
       def interactor
-        arguments.first.try(:constantize) || self.class.name.gsub(/Job\Z/, '').constantize
+        if self.class == ActiveJob::Interactor::Job
+          arguments.first.try(:constantize)
+        else
+          self.class.name.gsub(/Job\Z/, '').constantize
+        end
       rescue NameError => e
         raise NameError, "Interactor class does not exist: #{self.class.name.gsub(/Job\Z/, '')}"
       end

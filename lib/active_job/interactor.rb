@@ -2,9 +2,12 @@ require 'active_job/interactor/job'
 
 module ActiveJob
   module Interactor
-    extend ActiveSupport::Concern
+    def self.included(base)
+      base.send :include, ::Interactor unless base.ancestors.include?(::Interactor)
+      base.send :extend, ClassMethods
+    end
 
-    class_methods do
+    module ClassMethods
       def job=(klass)
         @job = klass
       end
